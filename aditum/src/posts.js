@@ -1,17 +1,38 @@
 import React from 'react';
-import { List, Edit, Create, Datagrid, ReferenceField, TextField, EditButton, DisabledInput, LongTextInput, ReferenceInput, SelectInput, SimpleForm, TextInput } from 'react-admin';
+import { List, Responsive, SimpleList, Edit, Create, Datagrid, ReferenceField, TextField, EditButton, DisabledInput, LongTextInput, Filter, ReferenceInput, SelectInput, SimpleForm, TextInput } from 'react-admin';
+
+
+const PostFilter = (props) => (
+    <Filter {...props}>
+        <TextInput label="Search" source="q" alwaysOn />
+        <ReferenceInput label="User" source="userId" reference="users" allowEmpty>
+            <SelectInput optionText="name" />
+        </ReferenceInput>
+    </Filter>
+);
 
 export const PostList = (props) => (
     <List {...props}>
-        <Datagrid>
-            <TextField source="id" />
-            <ReferenceField label="User" source="userId" reference="users">
-                <TextField source="name" />
-            </ReferenceField>
-            <TextField source="title" />
-            <TextField source="body" />
-            <EditButton />
-        </Datagrid>
+        <Responsive
+            small={
+                <SimpleList
+                    primaryText={record => record.title}
+                    secondaryText={record => `${record.views} views`}
+                    tertiaryText={record => new Date(record.published_at).toLocaleDateString()}
+                />
+            }
+            medium={
+                <Datagrid>
+                    <TextField source="id" />
+                    <ReferenceField label="User" source="userId" reference="users">
+                        <TextField source="name" />
+                    </ReferenceField>
+                    <TextField source="title" />
+                    <TextField source="body" />
+                    <EditButton />
+                </Datagrid>
+            }
+        />
     </List>
 );
 
@@ -43,3 +64,5 @@ export const PostCreate = (props) => (
         </SimpleForm>
     </Create>
 );
+
+
