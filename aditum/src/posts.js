@@ -12,9 +12,9 @@ const PostFilter = (props) => (
 );
 
 export const PostList = (props) => (
-    <List {...props}>
+    <List {...props} filters={<PostFilter />}>
         <Responsive
-            small={
+            small={ 
                 <SimpleList
                     primaryText={record => record.title}
                     secondaryText={record => `${record.views} views`}
