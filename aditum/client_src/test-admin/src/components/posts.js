@@ -1,5 +1,7 @@
 import React from 'react';
-import { List, Responsive, SimpleList, Edit, Create, Datagrid, TextField, EditButton, Filter, ReferenceInput, SelectInput, SimpleForm, TextInput } from 'react-admin';
+import { List, Responsive, SimpleList, Edit, Create, Datagrid, TextField, EditButton, Filter, ReferenceInput, SelectInput, SimpleForm, TextInput, Toolbar, SaveButton } from 'react-admin';
+
+
 
 const UserFilter = (props) => (
     <Filter {...props}>
@@ -52,24 +54,39 @@ export const UserEdit = (props) => (
     </Edit>
 );
 
+const PostCreateToolbar = props => (
+    <Toolbar {...props} >
+        <SaveButton
+            label="SAVE"
+            redirect={false}
+            submitOnEnter={true}
+        />
+        <SaveButton
+            label="SCAN"
+            redirect={false}
+            submitOnEnter={false}
+            variant="flat"
+        />
+    </Toolbar>
+);
+
+
+
 export const UserCreate = (props) => (
     <Create {...props}>
-        <SimpleForm>
+        <SimpleForm toolbar={<PostCreateToolbar />} redirect="show">
+        
             <TextInput source="firstName" />
             <TextInput source="lastName" />
             <TextInput source="department" />
             <TextInput source="email" />
             <TextInput source="telephone" />
-            <TextInput source="rdfUID" />
+            <TextInput source="rdfUID" />   
         </SimpleForm>
     </Create>
 
-         
-
-
-
-
-  
 
 
 );
+
+
