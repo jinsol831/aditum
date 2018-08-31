@@ -12,12 +12,23 @@ import authProvider from './components/authProvider';
 import loopbackRestClient from 'aor-loopback';
 import { createMuiTheme } from '@material-ui/core/styles';
 
+
 //Theming
 const theme = createMuiTheme({
   palette: {
     type: 'dark', // Switching the dark mode on is a single property value change.
   },
 });
+
+// const muiTheme = getMuiTheme({
+//   palette: {
+//     textColor: indigo900,
+//   },
+//   appBar: {
+//     height: 50,
+//   },
+// });
+
 
 //const dataProvider = jsonServerProvider('http://jsonplaceholder.typicode.com');
 const dataProvider = loopbackRestClient('http://localhost:3000/api/employees?access_token=GkXxHBfnmEnikuoOE3tuZm5OpgXVxSFn5VCUz3xDJRLXHufgRqspMpeLxzO6vSGK');

@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, Responsive, SimpleList, Edit, Create, Datagrid, ReferenceField, TextField, EditButton, DisabledInput, LongTextInput, Filter, ReferenceInput, SelectInput, SimpleForm, TextInput } from 'react-admin';
+import { List, Responsive, SimpleList, Edit, Create, Datagrid, TextField, EditButton, Filter, ReferenceInput, SelectInput, SimpleForm, TextInput } from 'react-admin';
 
 const UserFilter = (props) => (
     <Filter {...props}>
@@ -63,4 +63,13 @@ export const UserCreate = (props) => (
             <TextInput source="rdfUID" />
         </SimpleForm>
     </Create>
+
+         
+
+
+
+
+  
+
+
 );
