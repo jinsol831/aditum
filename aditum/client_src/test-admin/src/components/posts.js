@@ -66,6 +66,7 @@ const PostCreateToolbar = props => (
             redirect={false}
             submitOnEnter={false}
             variant="flat"
+            onClick= { function() {  }}
         />
     </Toolbar>
 );

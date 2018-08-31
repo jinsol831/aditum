@@ -1,5 +1,12 @@
 'use strict';
 
+// import rfidReader from './arduino'
+
+var arduino = require('./arduino.js');
+
+arduino.scan()
+
+
 var loopback = require('loopback');
 var boot = require('loopback-boot');
 
