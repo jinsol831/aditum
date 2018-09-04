@@ -11,6 +11,9 @@ import authProvider from './components/authProvider';
 //import dataProvider from './components/dataProvider';
 import loopbackRestClient from 'aor-loopback';
 import { createMuiTheme } from '@material-ui/core/styles';
+//implement Arduino H/W logic
+//var arduServer = require('./components/arduServer');
+
 
 
 //Theming
