@@ -1,5 +1,5 @@
 var SerialPort = require('serialport');
-var serialPort = new SerialPort('COM7', {
+var serialPort = new SerialPort('COM3', {
        baudRate: 9600
    });
 
@@ -56,5 +56,5 @@ function aControlTest(hex){
 
 
 module.exports = {
-    scan: rfidReader()
+    scan: rfidReader
  }

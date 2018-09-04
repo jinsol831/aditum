@@ -5,6 +5,7 @@
 var arduino = require('./arduino.js');
 
 arduino.scan()
+// console.log(arduino);
 
 
 var loopback = require('loopback');
