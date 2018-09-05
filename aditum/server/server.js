@@ -4,7 +4,9 @@
 
 var arduino = require('./arduino.js');
 
-arduino.scan()
+//let hex = arduino.scan();
+// console.log('hex', hex);
+
 // console.log(arduino);
 
 

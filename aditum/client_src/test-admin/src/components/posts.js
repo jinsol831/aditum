@@ -1,4 +1,6 @@
 import React from 'react';
+import axios from 'axios';
+// import scan from './arduServer'
 import { List, Responsive, SimpleList, Edit, Create, Datagrid, TextField, EditButton, Filter, ReferenceInput, SelectInput, SimpleForm, TextInput, Toolbar, SaveButton } from 'react-admin';
 
 
@@ -66,7 +68,7 @@ const PostCreateToolbar = props => (
             redirect={false}
             submitOnEnter={false}
             variant="flat"
-            onClick= { function() {  }}
+            onClick= { function() { axios.get('/api/arduino').then(result => console.log(result))}}
         />
     </Toolbar>
 );

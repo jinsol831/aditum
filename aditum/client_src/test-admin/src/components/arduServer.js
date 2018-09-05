@@ -1,6 +1,6 @@
-function arduLogic(){
+// function arduLogic(){
 var SerialPort = require('serialport');
-var serialPort = new SerialPort('COM7', {
+var serialPort = new SerialPort('COM3', {
         baudRate: 9600
     });
 
@@ -54,9 +54,13 @@ function aControlTest(hex){
         console.log("ACCESS DENIED!");
     }
   }
-}
+// }
 
 //Export function to new project
+// module.exports = {
+//     scan: arduLogic()
+//  }
+
 module.exports = {
-    scan: arduLogic()
+    scan: rfidReader
  }
