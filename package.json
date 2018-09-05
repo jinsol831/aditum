@@ -2,6 +2,7 @@
   "name": "aditum-backend",
   "version": "1.0.0",
   "main": "server/server.js",
+  "heroku-postbuild": "yarn build",
   "engines": {
     "node": ">=4"
   },
