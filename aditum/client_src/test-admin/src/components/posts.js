@@ -50,7 +50,7 @@ export const UserEdit = (props) => (
             <TextInput source="department" />
             <TextInput source="email" />
             <TextInput source="telephone" />
-            <TextInput source="rdfUID" />
+            <TextInput source="rdfUID" value="someVal" />
             <TextInput source="id" />
         </SimpleForm>
     </Edit>
@@ -68,7 +68,11 @@ const PostCreateToolbar = props => (
             redirect={false}
             submitOnEnter={false}
             variant="flat"
-            onClick= { function() { axios.get('/api/arduino').then(result => console.log(result))}}
+            onClick= { function() { axios.get('/api/arduino').then(result =>
+                //  console.log(result))
+                alert('ID is ' + result.data));
+                
+                }}
         />
     </Toolbar>
 );
