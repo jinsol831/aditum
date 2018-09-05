@@ -1,6 +1,6 @@
 {
   "db": {
-    "host": "mongo ds221271.mlab.com",
+    "host": "mongo ds221271.mlab.com/",
     "port": 21271,
     "url": "",
     "database": "heroku_0gs5vqb7",
