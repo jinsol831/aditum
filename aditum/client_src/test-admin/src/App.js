@@ -60,7 +60,7 @@ overrides: {
 const dataProvider = loopbackRestClient('http://localhost:3000/api/employees?access_token=GkXxHBfnmEnikuoOE3tuZm5OpgXVxSFn5VCUz3xDJRLXHufgRqspMpeLxzO6vSGK');
 
 const App = () => (
-  <Admin title="Adminstration" theme={theme} dashboard={Dashboard} authProvider={authProvider} dataProvider={dataProvider} restClient={loopbackRestClient('http://localhost:3000/api/employees?access_token=GkXxHBfnmEnikuoOE3tuZm5OpgXVxSFn5VCUz3xDJRLXHufgRqspMpeLxzO6vSGK')}>
+  <Admin title="Administration" theme={theme} dashboard={Dashboard} authProvider={authProvider} dataProvider={dataProvider} restClient={loopbackRestClient('http://localhost:3000/api/employees?access_token=GkXxHBfnmEnikuoOE3tuZm5OpgXVxSFn5VCUz3xDJRLXHufgRqspMpeLxzO6vSGK')}>
       <Resource name="users" list={UserList} edit={UserEdit} create={UserCreate} icon={PostIcon} />
       <Resource name="employees" list={EmployeeList} icon={UserIcon} />
   </Admin>
